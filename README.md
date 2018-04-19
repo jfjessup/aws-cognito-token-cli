@@ -14,8 +14,8 @@ configure users and resources in your own repo.
 If you are using AWS Cognito User Pools to authenticate calls to your application API then you will need an
 access token to authenticate your calls. Perhaps you want to deploy a
 [Serverless](https://serverless.com/framework/) API but want to test your API with a REST client, such as
-[insomnia](https://insomnia.rest/). You can use this project to generate you access tokens and then drop
-them into the `Authorization` header in your request. 
+[insomnia](https://insomnia.rest/). You can use this project to generate your identity token and then drop
+it into the `Authorization` header in your request. 
 
 ### How
 
@@ -23,5 +23,32 @@ them into the `Authorization` header in your request.
 * Run the following command:
 
 ```
-USERNAME=<username> PASSWORD=<password> TARGET_ENV=<target-environment> npm run gen:token
+USERNAME=<username> PASSWORD=<password> TARGET_RESOURCES=<target-environment> npm run gen:token
+```
+
+Sample input:
+
+```
+USERNAME=test@test.com PASSWORD=P@ssword1 TARGET_RESOURCES=BETA npm run gen:token
+```
+
+Sample output:
+
+```
+
+----------------------------------------------------------------------
+GENERATE IDENTITY TOKEN AND ACCESS TOKEN FOR PLATFORM
+GENERATING TOKENS FOR PLATFORM: BETA
+DISCOVERED THE FOLLOWING ENVIRONMENT RESOURCES:
+USER_POOL_ID: us-east-1_xxxxxxxxx
+CLIENT_ID: xxxxxxxxxxxxxxxxxxxxxxxxxx
+DISCOVERED THE FOLLOWING USER:
+USERNAME: test@test.com
+PASSWORD: **********
+-> Identity Token:
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+-> Access Token:
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+----------------------------------------------------------------------
+
 ```
