@@ -1,0 +1,27 @@
+{
+  "name": "aws-cognito-token-cli",
+  "version": "0.0.1",
+  "description": "Generate access and identity tokens for your AWS Cognito User Pools",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jfjessup/aws-cognito-token-cli.git"
+  },
+  "keywords": [
+    "AWS",
+    "Cognito"
+  ],
+  "author": "James Jessup",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jfjessup/aws-cognito-token-cli/issues"
+  },
+  "homepage": "https://github.com/jfjessup/aws-cognito-token-cli#readme",
+  "dependencies": {
+    "amazon-cognito-identity-js": "^2.0.3",
+    "bluebird": "^3.5.1"
+  }
+}
