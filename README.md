@@ -12,8 +12,8 @@ configure users and resources in your own repo.
 ### Why
 
 If you are using AWS Cognito User Pools to authenticate calls to your application API then you will need an
-identity token to authenticate your calls. Perhaps you want to deploy a
-[Serverless](https://serverless.com/framework/) API but want to test your API with a REST client, such as
+identity token to authenticate your calls. Perhaps you want to develop a
+[Serverless](https://serverless.com/framework/) API and test it with a REST client, such as
 [insomnia](https://insomnia.rest/). You can use this project to generate your identity token and then drop
 it into the `Authorization` header in your request. 
 
