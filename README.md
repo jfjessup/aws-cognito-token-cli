@@ -1,6 +1,6 @@
 # aws-cognito-token-cli
 
-Generate access and identity tokens for you AWS Cognito User Pools.
+Generate access and identity tokens for your AWS Cognito User Pools.
 
 ### What
 
